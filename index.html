@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookmarker</title>
+
+    <link
+      rel="shortcut icon"
+      href="img/bookmark-solid.svg"
+      type="image/x-icon"
+    />
+
+       <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-bs-theme="dark" class="bg-info-subtle">
+    <h1 class="text-center mt-4 text-info display-6 fw-bold">Bookmarker</h1>
+    <p class="text-center mt-2 text-white fs-6 fw-medium">Bookmark your favorite sites</p>
+
+
+    <div
+      class="container w-75 mx-auto mt-4 bg-info-subtle bg-gradient border border-info-subtle rounded-4 p-4 shadow"
+    >
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control border-info-subtle rounded-pill"
+          id="siteName"
+          placeholder=""
+        />
+        <label for="siteName" class="text-info-emphasis"><i class="fa-solid fa-book-bookmark text-info-emphasis me-2"></i>Site Name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control border-info-subtle rounded-pill"
+          id="siteURL"
+          placeholder=""
+        />
+        <label for="siteURL" class="text-info-emphasis"
+          ><i class="fa-solid fa-link text-info-emphasis me-2"></i>Site URL</label
+        >
+      </div>
+
+      <button
+        type="submit"
+        onclick="addSite();"
+        class="btn btn-outline-info px-5 py-2 rounded-pill"
+      >
+        Submit
+      </button>
+    </div>
+
+    <table class="table w-75 mx-auto mt-5">
+      <thead class="rounded-pill">
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+      </thead>
+
+      <tbody id="tBody"></tbody>
+    </table>
+
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
